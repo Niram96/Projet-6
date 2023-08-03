@@ -1,0 +1,22 @@
+$main-color: #FF6060;
+
+.banner {
+    display: flex;
+    width: 1240px;
+    height: 100%;
+    margin-top: 50px;
+    img {
+        width: 210.32px;
+        height: 100%;
+    }
+    ul {
+        display: flex;
+        gap: 57px;
+        list-style-type: none;
+        font-size: 24px;
+        li a {
+            text-decoration: none;
+            color: $main-color;
+        }
+    }
+}
