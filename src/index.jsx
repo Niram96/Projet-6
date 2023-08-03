@@ -5,15 +5,16 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Error from './components/Error';
 import './utils/styles/style.scss'
+import './fonts/Montserrat-Medium.ttf'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="*" element={<Error />} />
+        <Route name="home" path="/" element={<Home />} />
+        <Route name="about" path="/about" element={<About />} />
+        <Route name="error" path="*" element={<Error />} />
       </Routes>
     </Router>
   </React.StrictMode>

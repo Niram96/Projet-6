@@ -5,15 +5,15 @@ import '../../utils/styles/Banner.scss'
 function Banner() {
 
     return (
-        <div className='banner'>
+        <header>
             <img src={logo} alt='Logo Kasa'/>
             <nav>
                 <ul>
                     <li><Link to='/'>Accueil</Link></li>
-                    <li><Link to='/about'>À propos</Link></li>
+                    <li><Link to='/about'>A propos</Link></li>
                 </ul>
             </nav>
-        </div>
+        </header>
     )
 }
 

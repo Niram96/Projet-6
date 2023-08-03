@@ -1,0 +1,32 @@
+.presentation {
+    margin: 50px 100px 0 100px;
+    width: 1240px;
+    height: 223px;
+    .presentation-overlay {
+        position: absolute;
+        width: 1240px;
+        height: 223px;
+        border-radius: 25px;
+        background-color: #000000;
+        opacity: 30%;
+        z-index: 1;
+    }
+    .presentation-img {
+        position: absolute;
+        width: 1240px;
+        height: 223px;
+        border-radius: 25px;
+        object-fit: cover;
+        z-index: -1;
+    }
+    .presentation-txt {
+        position: relative;
+        text-align: center;
+        font-size: 48px;
+        font-weight: 500;
+        line-height: 223px;
+        color: #FFFFFF;
+        border-radius: 25px;
+        z-index: 2;
+    }
+}

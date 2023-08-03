@@ -1,6 +1,14 @@
 $main-color: #FF6060;
 
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: local("Montserrat"),
+     url("../../fonts/Montserrat-Medium.ttf") format("truetype");
+    font-weight: normal;
+   }
+
 * {
     max-width: 1440px;
     margin: auto;
+    font-family: 'Montserrat', sans-serif;
 }

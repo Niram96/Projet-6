@@ -1,22 +1,28 @@
 $main-color: #FF6060;
 
-.banner {
+header {
     display: flex;
+    justify-content: center;
+    align-items: flex-end;
     width: 1240px;
     height: 100%;
-    margin-top: 50px;
+    margin: 50px 100px 0 100px;
     img {
         width: 210.32px;
         height: 100%;
+        margin: 0 auto 0 0;
     }
-    ul {
-        display: flex;
-        gap: 57px;
-        list-style-type: none;
-        font-size: 24px;
-        li a {
-            text-decoration: none;
-            color: $main-color;
+    nav {
+        margin: 0;
+        ul {
+            display: flex;
+            gap: 57px;
+            list-style-type: none;
+            font-size: 24px;
+            li a {
+                text-decoration: none;
+                color: $main-color;
+            }
         }
     }
 }

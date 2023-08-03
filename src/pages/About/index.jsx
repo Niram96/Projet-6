@@ -1,8 +1,13 @@
+import React from "react";
+import Banner from "../../components/Banner";
+import Presentation from "../../components/Presentation";
+
 function About() {
     return (
-        <div>
-            <h1>A propos</h1>
-        </div>
+        <React.Fragment>
+        <Banner />
+        <Presentation />
+    </React.Fragment>
     )
 }
 
