@@ -12,3 +12,7 @@ $main-color: #FF6060;
     margin: auto;
     font-family: 'Montserrat', sans-serif;
 }
+
+header, .presentation, .presentation-img, .presentation-overlay, .presentation-txt, .cards-container {
+    max-width: 1240px;
+}
