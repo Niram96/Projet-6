@@ -1,0 +1,25 @@
+$main-color: #FF6060;
+
+.error-div {
+    display: flex;
+    flex-direction: column;
+    gap: 139px;
+    color: $main-color;
+    img {
+        width: 597px;
+        height: 263px;
+        margin-top: 139px;
+    }
+    p {
+        font-size: 36px;
+        line-height: 51.34px;
+        font-weight: 500;
+    }
+    a {
+        color: $main-color;
+        font-size: 18px;
+        line-height: 25.67px;
+        text-decoration: underline;
+        margin-bottom: 139px;
+    }
+}

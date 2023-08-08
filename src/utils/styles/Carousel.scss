@@ -1,0 +1,49 @@
+$main-color: #FF6060;
+
+.carousel {
+    position: relative;
+    max-width: 1240px;
+    margin-top: 50px;
+    img {
+        width: 100%;
+        height: 415px;
+        border-radius: 25px;
+        object-fit: cover;
+    }
+    .carousel-buttons {
+        position: absolute;
+        top: 147.68px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        z-index: 1;
+        .previous-button-carousel, .next-button-carousel {
+            width: 96px;
+            height: 119.64px;
+            background-color: transparent;
+            border: none;
+            margin: auto 0;
+        }
+        .next-button-carousel {
+            margin-left: auto;
+        }
+        .arrow-back, .arrow-forward {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .photo-nb-carousel {
+        width: 100%;
+        position: absolute;
+        top: 380px;
+        font-size: 18px;
+        color: #FFFFFF;
+        text-align: center;
+        line-height: 25.67px;
+    }
+}
+
+.inactive {
+    display: none;
+}

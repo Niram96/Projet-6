@@ -23,6 +23,9 @@ header {
                 text-decoration: none;
                 color: $main-color;
             }
+            li .active-link {
+                text-decoration: underline;
+            }
         }
     }
 }

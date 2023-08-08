@@ -1,6 +1,5 @@
 import imgHome from '../../assets/img_home.jpg'
 import imgAbout from '../../assets/img_about.jpg'
-//import { useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import '../../utils/styles/Presentation.scss'
 
