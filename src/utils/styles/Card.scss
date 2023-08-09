@@ -13,6 +13,12 @@ $background: #F6F6F6;
     border-radius: 25px;
     margin-top: 50px;
     padding: 25px 0;
+    :nth-child(19) {
+        margin : 0 0 0 11px;
+    }
+    :nth-child(20) {
+        margin : 0 auto 0 24px;
+    }
     .card {
         position: relative;
         width: 340px;

@@ -31,4 +31,30 @@
         padding-top: 80px;
         z-index: 2;
     }
+    br {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 720px) {
+    .presentation {
+        width: 89%;
+        height: 111px;
+        .presentation-img, .presentation-overlay {
+            width: 89%;
+            height: 111px;
+        }
+        .presentation-txt {
+            display: flex;
+            align-items: center;
+            width: 217px;
+            height: 100%;
+            font-size: 24px;
+            padding: 0;
+            margin: auto 0 auto 15px;
+        }
+        br {
+            display: inline;
+        }
+    }
 }

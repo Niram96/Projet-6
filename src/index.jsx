@@ -5,8 +5,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Accommodations from './pages/Accommodations';
 import Error from './pages/Error';
-import './utils/styles/style.scss'
-import './fonts/Montserrat-Medium.ttf'
+import './utils/styles/style.scss';
+import './fonts/Montserrat-Medium.ttf';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

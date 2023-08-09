@@ -1,8 +1,8 @@
-import accommodations from '../../datas/logements.json'
 import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import arrowBack from '../../assets/arrow_back.png'
 import arrowForward from '../../assets/arrow_forward.png'
+import accommodations from '../../datas/accommodations.json'
 import '../../utils/styles/Carousel.scss'
 
 let pictures = ''
@@ -13,7 +13,7 @@ function Carousel() {
     const path = siteLocation.pathname
     const id = path.substring(16, path.length)
     const [selectedPicture, setSelectedPicture] = useState('')
-
+    
     for (let i=0; i<accommodations.length; i++) {
         const accomodation = accommodations[i]
         if (accomodation.id === id) {
@@ -23,18 +23,17 @@ function Carousel() {
 
     useEffect(() => {
         setSelectedPicture(pictures[0])
+        i=0
     }, [])
 
     function previousImg() {
         if (selectedPicture === pictures[0]) {
             setSelectedPicture(pictures[pictures.length - 1])
             i = pictures.length - 1
-            console.log(i, selectedPicture)
         }
         else {
             setSelectedPicture(pictures[i-1])
             i--
-            console.log(i, selectedPicture)
         }
     }
 
@@ -42,18 +41,16 @@ function Carousel() {
         if (selectedPicture === pictures[pictures.length - 1]) {
             setSelectedPicture(pictures[0])
             i = 0
-            console.log(i, selectedPicture)
         }
         else {
             setSelectedPicture(pictures[i+1])
             i++
-            console.log(i, selectedPicture)
         }
     }
 
     return (
         <div className='carousel'>
-            <img src={selectedPicture} alt = 'Location immobilière'></img>
+            <img src={selectedPicture} alt='Location immobilière'></img>
             <div className='carousel-buttons'>
                 <button className={pictures.length > 1 ? 'previous-button-carousel' : 'inactive'} onClick={() => previousImg()}>
                     <img className='arrow-back' src={arrowBack} alt='Précédent'></img>

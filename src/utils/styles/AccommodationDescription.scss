@@ -1,0 +1,50 @@
+$main-color: #FF6060;
+
+.accommodation-description {
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    .title-and-location {
+        margin-left: 0;
+        h1 {
+            color: $main-color;
+            font-size: 36px;
+            font-weight: 500;
+            line-height: 51.34px;
+        }
+        h2 {
+            color: $main-color;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 25.67px;
+        }
+    }
+    .host {
+        display: flex;
+        margin-right: 0;
+        img {
+            width: 64px;
+            height: 64px;
+            border-radius: 90px;
+        }
+        p {
+            width: 93px;
+            color: $main-color;
+            font-size: 18px;
+        }
+    }
+}
+.tags-and-rating {
+    display: flex;
+}
+.description-and-equipments {
+    display: flex;
+    gap: 100px;
+    p {
+        height: 100%;
+        line-height: 28px;
+    }
+    ul {
+        padding: 0;
+    }
+}

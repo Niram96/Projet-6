@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import Banner from '../../components/Banner'
 import Presentation from '../../components/Presentation';
 import Card from '../../components/Card'
 import Footer from '../../components/Footer';
-import accommodations from '../../datas/logements.json'
-import { Link } from 'react-router-dom';
+import accommodations from '../../datas/accommodations.json'
+
 
 function Home() {
   return (

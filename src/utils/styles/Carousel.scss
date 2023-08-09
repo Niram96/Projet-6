@@ -2,7 +2,6 @@ $main-color: #FF6060;
 
 .carousel {
     position: relative;
-    max-width: 1240px;
     margin-top: 50px;
     img {
         width: 100%;
@@ -10,7 +9,7 @@ $main-color: #FF6060;
         border-radius: 25px;
         object-fit: cover;
     }
-    .carousel-buttons {
+      .carousel-buttons {
         position: absolute;
         top: 147.68px;
         left: 0;
