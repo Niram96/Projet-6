@@ -4,7 +4,7 @@ $main-color: #FF6060;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: auto;
+    width: 115px;
     height: 25px;
     background-color: $main-color;
     border-radius: 10px;
@@ -12,5 +12,8 @@ $main-color: #FF6060;
     font-size: 14px;
     line-height: 19.96px;
     margin : 25px 15px 0 0;
-    padding: 5px;
+}
+
+@media screen and (min-width: 375px) and (max-width: 720px) {
+
 }

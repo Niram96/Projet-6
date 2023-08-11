@@ -14,9 +14,9 @@ function Presentation() {
     whichLocation === '/' ? ((img = homeImg) && (alt = homeImgAlt)) && (isHome = 1) : ((img = aboutImg) && (alt = aboutImgAlt) && (isHome = 0))
 
     return (
-    <div className='presentation'>
-        <div className='presentation-overlay'></div>
-        <img className='presentation-img' src={img} alt={alt}/>
+    <div className={isHome ? 'presentation' : 'presentation presentation-about-mobile'}>
+        <div className={isHome ? 'presentation-overlay' : 'presentation-overlay presentation-overlay-about-mobile'}></div>
+        <img className={isHome ? 'presentation-img' : 'presentation-img presentation-img-about-mobile'} src={img} alt={alt}/>
         {isHome ? <p className='presentation-txt'>Chez vous, <br />partout et ailleurs</p> : null}
     </div>
   )

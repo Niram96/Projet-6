@@ -1,6 +1,6 @@
 $main-color: #FF6060;
 
-.accommodation-description {
+.accommodation-title-location-and-host {
     width: 100%;
     margin-top: 25px;
     display: flex;
@@ -46,5 +46,30 @@ $main-color: #FF6060;
     }
     ul {
         padding: 0;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 720px) {
+    .accommodation-title-location-and-host {
+        display: flex;
+        flex-direction: column;
+        gap: 27px;
+        width: 89.3%;
+        .title-and-location {
+            h1 {
+                width: 100%;
+                font-size: 18px;
+                line-height: 25.67px;
+            }
+            h2 {
+                width: 100%;
+                font-size: 14px;
+                line-height: 19.96px;
+            }
+        }
+    }
+    .tags-and-rating {
+        display: block;
+        width: 89.3%;
     }
 }

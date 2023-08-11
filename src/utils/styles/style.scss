@@ -25,6 +25,9 @@ button {
     cursor: pointer;
 }
 
-header, .presentation, .presentation-img, .presentation-overlay, .presentation-txt, .cards-container, .carousel, .accommodation-description, .tags-and-rating, .description-and-equipments {
+header, .presentation, .presentation-img, .presentation-overlay, .presentation-txt, .cards-container, .carousel, .accommodation-title-location-and-host, .tags-and-rating, .description-and-equipments {
     max-width: 1240px;
+}
+
+@media screen and (min-width: 375px) and (max-width: 720px) {
 }

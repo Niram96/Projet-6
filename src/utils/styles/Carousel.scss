@@ -23,13 +23,13 @@ $main-color: #FF6060;
             background-color: transparent;
             border: none;
             margin: auto 0;
+            .arrow-back, .arrow-forward {
+                width: 100%;
+                height: 100%;
+            }
         }
         .next-button-carousel {
             margin-left: auto;
-        }
-        .arrow-back, .arrow-forward {
-            width: 100%;
-            height: 100%;
         }
     }
     .photo-nb-carousel {
@@ -45,4 +45,32 @@ $main-color: #FF6060;
 
 .inactive {
     display: none;
+}
+
+@media screen and (min-width: 375px) and (max-width: 720px) {
+    .carousel {
+        width: 89.3%;
+        height: 255px;
+        margin-top: 27px;
+        img {
+            width: 100%;
+            height: 255px;
+        }
+        .carousel-buttons {
+            top: 115.5px;
+            left: -5px;
+            width: 100%;
+            .previous-button-carousel, .next-button-carousel {
+                width: 24px;
+                height: 24px;
+                .arrow-back-min, .arrow-forward-min {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+        .photo-nb-carousel {
+            display: none;
+        }
+    }
 }

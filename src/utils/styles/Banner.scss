@@ -29,3 +29,27 @@ header {
         }
     }
 }
+
+@media screen and (min-width: 375px) and (max-width: 720px) {
+    header {
+        width: 335px;
+        gap: 26px;
+        justify-content: center;
+        align-items: center;
+        margin: 27px auto 0 auto;
+        img {
+            width: 145px;
+            height: 100%;
+        }
+        nav {
+            ul {
+                padding: 0;
+                font-size: 12px;
+                line-height: 17.11px;
+                gap: 26px;
+                li > li {
+                    width: 66px;                }
+            }
+        }
+    }
+}

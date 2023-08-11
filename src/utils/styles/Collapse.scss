@@ -63,3 +63,30 @@ $background: #F6F6F6;
         transition: max-height 400ms ease-in;
     }
 }
+
+@media screen and (min-width: 375px) and (max-width: 720px) {
+    .collapse{
+        width: 100%;
+        height: 100%;
+        margin-top: 19px;
+        .collapse-title-bar {
+            width: 89.3%;
+            height: 30px;
+            margin: 0 auto;
+            h1 {
+                font-size: 13px;
+                line-height: 18.54px;
+                padding: 8.5px;
+            }
+            .collapse-button {
+                width: 32px;
+                height: 32px;
+                img {
+                    width: 16px;
+                    height: 9.14px;
+                }
+            }
+        }
+
+    }
+}

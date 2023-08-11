@@ -6,7 +6,6 @@ import Card from '../../components/Card'
 import Footer from '../../components/Footer';
 import accommodations from '../../datas/accommodations.json'
 
-
 function Home() {
   return (
     <React.Fragment>

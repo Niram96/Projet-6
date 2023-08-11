@@ -1,30 +1,32 @@
 import { useEffect, useState } from 'react'
-import { useLocation } from 'react-router-dom'
 import arrowBack from '../../assets/arrow_back.png'
 import arrowForward from '../../assets/arrow_forward.png'
-import accommodations from '../../datas/accommodations.json'
+import arrowBackMin from '../../assets/arrow_back-min.png'
+import arrowForwardMin from '../../assets/arrow_forward-min.png'
 import '../../utils/styles/Carousel.scss'
 
-let pictures = ''
 let i = 0
 
-function Carousel() {
-    const siteLocation = useLocation()
-    const path = siteLocation.pathname
-    const id = path.substring(16, path.length)
+function Carousel({pictures}) {
     const [selectedPicture, setSelectedPicture] = useState('')
-    
-    for (let i=0; i<accommodations.length; i++) {
-        const accomodation = accommodations[i]
-        if (accomodation.id === id) {
-            pictures = accomodation.pictures
-        }
+    const [isMobile, setIsMobile] = useState(false)
+ 
+    const handleResize = () => {
+    if (window.innerWidth < 720) {
+        setIsMobile(true)
+    } else {
+        setIsMobile(false)
     }
+    }  
+
+    useEffect(() => {
+    window.addEventListener("resize", handleResize)
+    })
 
     useEffect(() => {
         setSelectedPicture(pictures[0])
         i=0
-    }, [])
+    }, [pictures])
 
     function previousImg() {
         if (selectedPicture === pictures[0]) {
@@ -53,10 +55,18 @@ function Carousel() {
             <img src={selectedPicture} alt='Location immobilière'></img>
             <div className='carousel-buttons'>
                 <button className={pictures.length > 1 ? 'previous-button-carousel' : 'inactive'} onClick={() => previousImg()}>
+                    {isMobile ?
+                    <img className='arrow-back-min' src={arrowBackMin} alt='Précédent'></img>
+                    :
                     <img className='arrow-back' src={arrowBack} alt='Précédent'></img>
+                    }
                 </button>
                 <button className={pictures.length > 1 ? 'next-button-carousel' : 'inactive'} onClick={() => nextImg()}>
+                    {isMobile ?
+                    <img className='arrow-forward-min' src={arrowForwardMin} alt='Suivant'></img>
+                    :
                     <img className='arrow-forward' src={arrowForward} alt='Suivant'></img>
+                    }
                 </button>
             </div>
             <p className={pictures.length > 1 ? 'photo-nb-carousel' : 'inactive'}>{i+1}/{pictures.length}</p>
