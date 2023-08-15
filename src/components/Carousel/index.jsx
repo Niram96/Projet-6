@@ -9,19 +9,19 @@ let i = 0
 
 function Carousel({pictures}) {
     const [selectedPicture, setSelectedPicture] = useState('')
-    const [isMobile, setIsMobile] = useState(false)
- 
-    const handleResize = () => {
-    if (window.innerWidth < 720) {
-        setIsMobile(true)
-    } else {
-        setIsMobile(false)
-    }
-    }  
+    const [width, setWidth] = useState(window.innerWidth);
 
+    function handleWindowSizeChange() {
+        setWidth(window.innerWidth);
+    }
     useEffect(() => {
-    window.addEventListener("resize", handleResize)
-    })
+        window.addEventListener('resize', handleWindowSizeChange);
+        return () => {
+            window.removeEventListener('resize', handleWindowSizeChange);
+        }
+    }, []);
+    
+    const isMobile = width <= 800;
 
     useEffect(() => {
         setSelectedPicture(pictures[0])

@@ -5,22 +5,23 @@ import logo from '../../assets/logo.png'
 import '../../utils/styles/Banner.scss'
 
 function Banner() {
-    const [isMobile, setIsMobile] = useState(false)
-    
-    const handleResize = () => {
-    if (window.innerWidth < 720) {
-        setIsMobile(true)
-    } else {
-        setIsMobile(false)
-    }
-    }  
+    const [width, setWidth] = useState(window.innerWidth);
 
+    function handleWindowSizeChange() {
+        setWidth(window.innerWidth);
+    }
     useEffect(() => {
-    window.addEventListener("resize", handleResize)
-    })
+        window.addEventListener('resize', handleWindowSizeChange);
+        return () => {
+            window.removeEventListener('resize', handleWindowSizeChange);
+        }
+    }, []);
+    
+    const isMobile = width <= 800;
 
     const location = useLocation()
     const whichLocation = location.pathname
+    
     return (
         <header>
             <img src={logo} alt='Logo Kasa'/>

@@ -4,22 +4,22 @@ import arrowMin from '../../assets/arrow-min.png'
 import '../../utils/styles/Collapse.scss'
 
 function Collapse({title, text}) {
-const[isOpen, setOpen] = useState(false)
-const [isMobile, setIsMobile] = useState(false)
- 
-const handleResize = () => {
-  if (window.innerWidth < 720) {
-      setIsMobile(true)
-  } else {
-      setIsMobile(false)
-  }
-}  
+    const [isOpen, setOpen] = useState(false)
+    const [width, setWidth] = useState(window.innerWidth);
 
-useEffect(() => {
-  window.addEventListener("resize", handleResize)
-})
+    function handleWindowSizeChange() {
+        setWidth(window.innerWidth);
+    }
+    useEffect(() => {
+        window.addEventListener('resize', handleWindowSizeChange);
+        return () => {
+            window.removeEventListener('resize', handleWindowSizeChange);
+        }
+    }, []);
 
-return (
+    const isMobile = width <= 800;
+
+    return (
         <div className='collapse'>
             <div className='collapse-title-bar'>
                 <h1>{title}</h1>

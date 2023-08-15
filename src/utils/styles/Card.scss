@@ -62,7 +62,18 @@ $background: #F6F6F6;
     }
 }
 
-@media screen and (min-width: 375px) and (max-width: 720px) {
+@media screen and (min-width: 800px) and (max-width: 1240px){
+    .cards-container {
+        :nth-child(19) {
+            margin : 0;
+        }
+        :nth-child(20) {
+            margin : 0;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
     .cards-container {
         background: #FFFFFF;
         margin-top: 10px;

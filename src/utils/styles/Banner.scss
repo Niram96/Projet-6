@@ -24,15 +24,15 @@ header {
                 color: $main-color;
             }
             li .active-link {
-                text-decoration: underline;
+                text-decoration: underline !important;
             }
         }
     }
 }
 
-@media screen and (min-width: 375px) and (max-width: 720px) {
+@media screen and (max-width: 800px) {
     header {
-        width: 335px;
+        width: 89.3%;
         gap: 26px;
         justify-content: center;
         align-items: center;
@@ -48,7 +48,8 @@ header {
                 line-height: 17.11px;
                 gap: 26px;
                 li > li {
-                    width: 66px;                }
+                    width: 66px;                
+                }
             }
         }
     }

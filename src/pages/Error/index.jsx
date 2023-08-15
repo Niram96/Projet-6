@@ -11,7 +11,7 @@ function Error() {
             <Banner />
             <div className='error-div'>
                 <img src={img404} alt='Erreur 404'></img>
-                <p>Oups! La page que vous demandez n'existe pas.</p>
+                <p>Oups! La page que<br /> vous demandez n'existe pas.</p>
                 <Link to='/'>Retourner sur la page d'accueil</Link>
             </div>            
             <Footer />

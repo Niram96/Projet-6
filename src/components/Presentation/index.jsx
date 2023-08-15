@@ -6,12 +6,13 @@ import '../../utils/styles/Presentation.scss'
 function Presentation() {
     const location = useLocation()
     const whichLocation = location.pathname
+    let isHome = false
     let img = ''
     let alt = ''
-    let isHome = 0
     const homeImgAlt = "Littoral rocheux"
     const aboutImgAlt = "Vallée montagneuse"
-    whichLocation === '/' ? ((img = homeImg) && (alt = homeImgAlt)) && (isHome = 1) : ((img = aboutImg) && (alt = aboutImgAlt) && (isHome = 0))
+
+    whichLocation === '/' ? ((img = homeImg) && (alt = homeImgAlt)) && (isHome = true) : ((img = aboutImg) && (alt = aboutImgAlt) && (isHome = false))
 
     return (
     <div className={isHome ? 'presentation' : 'presentation presentation-about-mobile'}>
@@ -23,4 +24,3 @@ function Presentation() {
 }
 
 export default Presentation
-

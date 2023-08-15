@@ -49,27 +49,65 @@ $main-color: #FF6060;
     }
 }
 
-@media screen and (min-width: 375px) and (max-width: 720px) {
-    .accommodation-title-location-and-host {
+@media screen and (max-width: 800px) {
+    .accommodation-title-location {
         display: flex;
         flex-direction: column;
         gap: 27px;
         width: 89.3%;
         .title-and-location {
+            width: 100%;
+            margin-top: 10px;
             h1 {
                 width: 100%;
                 font-size: 18px;
+                font-weight: 500;
                 line-height: 25.67px;
+                text-align: left;
+                color: $main-color;
             }
             h2 {
                 width: 100%;
                 font-size: 14px;
+                font-weight: 500;
                 line-height: 19.96px;
+                color: $main-color;
             }
         }
     }
-    .tags-and-rating {
-        display: block;
+    .rating-and-host {
         width: 89.3%;
+        height: 33px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        img {
+            width: 32px;
+            height: 32px;
+            border-radius: 90px;
+            margin: 0;
+        }
+        p {
+            width: 93px;
+            color: $main-color;
+            text-align: center;
+            font-size: 12px;
+            margin: 0;
+        }
+    }
+    .description-and-equipments {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        gap: 0px;
+        p {
+            height: 100%;
+            line-height: 28px;
+        }
+        ul {
+            padding: 0;
+        }
     }
 }

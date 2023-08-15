@@ -3,7 +3,7 @@ $main-color: #FF6060;
 @font-face {
     font-family: 'Montserrat', sans-serif;
     src: local("Montserrat"),
-     url("../../fonts/Montserrat-Medium.ttf") format("truetype");
+     url("../../fonts/Montserrat-Regular.ttf") format("truetype");
     font-weight: normal;
    }
 
@@ -29,5 +29,8 @@ header, .presentation, .presentation-img, .presentation-overlay, .presentation-t
     max-width: 1240px;
 }
 
-@media screen and (min-width: 375px) and (max-width: 720px) {
+@media screen and (min-width: 800px) and (max-width: 1240px){
+    header, .presentation, .presentation-img, .presentation-overlay, .presentation-txt, .cards-container, .carousel, .accommodation-title-location-and-host, .tags-and-rating, .description-and-equipments {
+        max-width: 89.3%;
+    }
 }
